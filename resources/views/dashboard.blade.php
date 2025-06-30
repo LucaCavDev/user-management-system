@@ -8,8 +8,15 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
+                <!-- <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
+                </div> -->
+                <div class="p-6 text-gray-900">
+                    Hi <strong>{{ auth()->user()->username }}</strong>,
+                    <br>
+                    You are logged in with the email: <strong>{{ auth()->user()->email }}</strong>
+                    <br>
+                    and you registered on: <strong>{{ auth()->user()->created_at->format('d/m/Y H:i') }}</strong>
                 </div>
             </div>
         </div>
